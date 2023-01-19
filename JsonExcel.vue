@@ -44,7 +44,7 @@ export default {
     },
     // Footer(s) for the data, could be a string or an array of strings (multiple footers)
     footer: {
-      default: null,
+      default: 'footer',
     },
     // filename to export
     name: {
@@ -184,12 +184,10 @@ export default {
 
       //Footer
       if (this.footer != null) {
-        xlsData += "<tfoot>";
         xlsData += this.parseExtraData(
           this.footer,
           '<tr><th colspan="' + colspan + '">${data}</th></tr>'
         );
-        xlsData += "</tfoot>";
       }
 
       return xlsTemp
