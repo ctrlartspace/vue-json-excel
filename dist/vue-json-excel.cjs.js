@@ -204,9 +204,6 @@ var script = {
       default: "",
     },
     // Title(s) for the data, could be a string or an array of strings (multiple titles)
-    header: {
-      default: null,
-    },
     // Footer(s) for the data, could be a string or an array of strings (multiple footers)
     footer: {
       default: null,
@@ -619,7 +616,11 @@ var __vue_render__ = function() {
   return _c(
     "div",
     { attrs: { id: _vm.idName }, on: { click: _vm.generate } },
-    [_vm._t("default", [_vm._v(" Download " + _vm._s(_vm.name) + " ")])],
+    [
+      _vm._t("default", function() {
+        return [_vm._v(" Download " + _vm._s(_vm.name) + " ")]
+      })
+    ],
     2
   )
 };
