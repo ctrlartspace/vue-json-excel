@@ -208,6 +208,9 @@
 	      default: "",
 	    },
 	    // Title(s) for the data, could be a string or an array of strings (multiple titles)
+	    header: {
+	      default: null,
+	    },
 	    // Footer(s) for the data, could be a string or an array of strings (multiple footers)
 	    footer: {
 	      default: null,
