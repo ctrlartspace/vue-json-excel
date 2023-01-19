@@ -187,7 +187,7 @@ export default {
         xlsData += "<tfoot>";
         xlsData += this.parseExtraData(
           this.footer,
-          '<tr><tr colspan="' + colspan + '">${data}</tr></tr>'
+          '<tr><th colspan="' + colspan + '">${data}</th></tr>'
         );
         xlsData += "</tfoot>";
       }

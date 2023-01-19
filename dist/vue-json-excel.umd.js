@@ -356,7 +356,7 @@
 	        xlsData += "<tfoot>";
 	        xlsData += this.parseExtraData(
 	          this.footer,
-	          '<tr><td colspan="' + colspan + '">${data}</td></tr>'
+	          '<tr><tr colspan="' + colspan + '">${data}</tr></tr>'
 	        );
 	        xlsData += "</tfoot>";
 	      }
