@@ -218,7 +218,7 @@ var script = {
     },
     // Footer(s) for the data, could be a string or an array of strings (multiple footers)
     footer: {
-      default: 'footer',
+      default: null,
     },
     // filename to export
     name: {
