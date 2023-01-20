@@ -201,6 +201,17 @@
 	      type: Object,
 	      default: () => null,
 	    },
+
+	    sumFields: {
+	      type: Array,
+	      required: false,
+	      default: null
+	    },
+	    sumTitle: {
+	      type: String,
+	      required: false,
+	      default: 'Total'
+	    },
 	    // Use as fallback when the row has no field values
 	    defaultValue: {
 	      type: String,
@@ -351,6 +362,28 @@
 	      });
 	      xlsData += "</tbody>";
 
+	      // Summaries
+
+	      if (this.sumFields != null) {
+	        const columns = Object.keys(data[0]);
+	        xlsData += '<tr>';
+	        xlsData += '<td><b>' + this.sumTitle + '</b></td>';
+	        columns.filter((c, i) => i > 0).forEach(c => {
+	          if (this.sumFields.includes(c)) {
+	            let sum = 0;
+	            data.forEach(d => {
+	              if (!isNaN(d[c])) {
+	                sum += d[c];
+	                }
+	              });
+	            xlsData += '<td><b>' + sum + '</b></td>';
+	          } else {
+	            xlsData += '<th></th>';
+	          }
+	        });
+	        xlsData += '</tr>';
+
+	      }
 	      //Footer
 	      if (this.footer != null) {
 	        xlsData += this.parseExtraData(
