@@ -5,6 +5,7 @@
   "main": "dist/vue-json-excel.umd.js",
   "module": "dist/vue-json-excel.esm.js",
   "scripts": {
+    "dev": "vue-cli-service serve",
     "build:dist": "rollup -c ./rollup.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "push": "npm run build:dist && git add . && git commit -am '1' && git push"
@@ -33,9 +34,11 @@
   },
   "homepage": "https://github.com/jecovier/vue-json-excel#readme",
   "dependencies": {
-    "downloadjs": "^1.4.7"
+    "downloadjs": "^1.4.7",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@vue/cli-service": "^5.0.8",
     "rollup": "^1.7.4",
     "rollup-plugin-commonjs": "^9.2.2",
     "rollup-plugin-node-resolve": "^4.0.1",

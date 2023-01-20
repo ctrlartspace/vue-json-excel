@@ -182,6 +182,8 @@ export default {
       });
       xlsData += "</tbody>";
 
+      // Summaries
+
       //Footer
       if (this.footer != null) {
         xlsData += this.parseExtraData(
