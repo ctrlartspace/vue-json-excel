@@ -177,7 +177,7 @@ var script = {
     // mime type [xls, csv]
     type: {
       type: String,
-      default: "xls",
+      default: "xlsx",
     },
     // Json to download
     data: {
